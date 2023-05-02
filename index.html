@@ -3,6 +3,7 @@
     <head>
         <title>Color Converter!</title>
         <script src="rgb-to-hex-controller.js" type="module"></script>
+        <script src="hex-to-rgb-controller.js" type="module"></script>
         <style>
             label {
                 display: inline-block;
@@ -13,8 +14,10 @@
             }
 
             .container {
-                padding: 5px;
+                padding: 10px;
+                margin: 10px;
                 width: fit-content;
+                outline: black solid 1px;
             }
 
             div.container > * {
@@ -34,6 +37,14 @@
                 display: block;
                 margin-left: 1.2em;
                 margin-bottom: 5px;
+            }
+
+            .rgb-output > span {
+                margin-right: 1em;
+            }
+
+            .hex-input {
+                width: 8em;
             }
         </style>
     </head>
@@ -60,6 +71,25 @@
                 <div>
                     <label for="hexResult">Result:&nbsp;</label>
                     <span id="hexResult">#000000</span>
+                </div>
+            </div>
+        </form>
+        <form id="hexToRgb">
+            <div class="container">
+                <span style="text-align: center;">Hex to Rgb:</span>
+                <div>
+                    <label for="inputHex">Hex:&nbsp;</label>
+                    <input id="inputHex" class="hex-input" type="text" pattern="^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$" value="#000000" required>
+                </div>
+                <input style="width: 100%;" type="submit" value="Convert">
+                <span style="text-align: center;">Result:</span>
+                <div class="rgb-output">
+                    <label for="rResult1">R:&nbsp;</label>
+                    <span id="rResult1">0</span>
+                    <label for="gResult1">G:&nbsp;</label>
+                    <span id="gResult1">0</span>
+                    <label for="bResult1">B:&nbsp;</label>
+                    <span id="bResult1">0</span>
                 </div>
             </div>
         </form>

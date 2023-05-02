@@ -3,6 +3,8 @@ import { rgbToHex } from './convert/rgb-to-hex.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('rgbToHex').addEventListener('submit', (e) => {
+        e.preventDefault();
+
         const r = document.getElementById('inputR').value;
         const g = document.getElementById('inputG').value;
         const b = document.getElementById('inputB').value;
@@ -10,7 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const output = document.getElementById('hexResult');
         output.innerText = rgbToHex(color);
-
-        e.preventDefault();
     });
 });
