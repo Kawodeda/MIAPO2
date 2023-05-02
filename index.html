@@ -5,6 +5,7 @@
         <script src="rgb-to-hex-controller.js" type="module"></script>
         <script src="hex-to-rgb-controller.js" type="module"></script>
         <script src="rgb-to-hsv-controller.js" type="module"></script>
+        <script src="hsv-to-rgb-controller.js" type="module"></script>
         <link href="styles.css" rel="stylesheet">
     </head>
     <body>
@@ -89,15 +90,15 @@
                     <div class="color-input">
                         <div>
                             <label for="inputH">H</label>
-                            <input class="component-input" style="width: 4em;" id="inputH" type="number" min="0" max="360" value="0" step="0.1" required>
+                            <input class="component-input" style="width: 4em;" id="inputH" type="number" min="0" max="360" value="0" step="0.01" required>
                         </div>
                         <div>
                             <label for="inputS">S</label>
-                            <input class="component-input" id="inputS" type="number" min="0" max="1" value="0" step="0.1" required>
+                            <input class="component-input" id="inputS" type="number" min="0" max="1" value="0" step="0.01" required>
                         </div>
                         <div>
                             <label for="inputV">V</label>
-                            <input class="component-input" id="inputV" type="number" min="0" max="1" value="0" step="0.1" required>
+                            <input class="component-input" id="inputV" type="number" min="0" max="1" value="0" step="0.01" required>
                         </div>
                     </div>
                     <input style="width: 100%;" type="submit" value="Convert">

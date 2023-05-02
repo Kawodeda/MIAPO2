@@ -1,4 +1,4 @@
-import { hexToRgb } from './convert/hex-to-rgb.js'
+import { hexToRgb } from './convert/hex-to-rgb.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('hexToRgb').addEventListener('submit', (e) => {
