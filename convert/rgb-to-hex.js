@@ -1,4 +1,4 @@
-import { clampValue } from '../utils/math.js';
+import { clamp } from '../utils/math.js';
 
 export function rgbToHex(rgbColor) {
     const rHex = convertComponent(rgbColor.r);
@@ -9,7 +9,7 @@ export function rgbToHex(rgbColor) {
 }
 
 function convertComponent(value) {
-    return clampValue(value, 0, 255)
+    return clamp(value, 0, 255)
         .toString(16)
         .padStart(2, '0');
 }
