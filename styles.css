@@ -1,0 +1,45 @@
+label {
+    display: inline-block;
+}
+
+span {
+    display: inline-block;
+}
+
+.container {
+    padding: 10px;
+    margin: 10px;
+    width: fit-content;
+    outline: black solid 1px;
+}
+
+div.container > * {
+    display: block;
+    margin: 1em 0 0 0;
+}
+
+.component-input {
+    width: 3em;
+}
+
+.rgb-input > div {
+    display: inline-block;
+}
+
+.rgb-input > div > label {
+    display: block;
+    margin-left: 1.2em;
+    margin-bottom: 5px;
+}
+
+.rgb-output > span {
+    margin-right: 1em;
+}
+
+.hex-input {
+    width: 8em;
+}
+
+.hsv-output > span {
+    margin-right: 1em;
+}
