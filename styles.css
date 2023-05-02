@@ -22,24 +22,20 @@ div.container > * {
     width: 3em;
 }
 
-.rgb-input > div {
+.color-input > div {
     display: inline-block;
 }
 
-.rgb-input > div > label {
+.color-input > div > label {
     display: block;
     margin-left: 1.2em;
     margin-bottom: 5px;
 }
 
-.rgb-output > span {
+.color-output > span {
     margin-right: 1em;
 }
 
 .hex-input {
     width: 8em;
-}
-
-.hsv-output > span {
-    margin-right: 1em;
 }
