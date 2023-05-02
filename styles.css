@@ -7,8 +7,10 @@ span {
 }
 
 .container {
-    padding: 5px;
+    padding: 10px;
+    margin: 10px;
     width: fit-content;
+    outline: black solid 1px;
 }
 
 div.container > * {
@@ -28,6 +30,14 @@ div.container > * {
     display: block;
     margin-left: 1.2em;
     margin-bottom: 5px;
+}
+
+.rgb-output > span {
+    margin-right: 1em;
+}
+
+.hex-input {
+    width: 8em;
 }
 
 .hsv-output > span {
