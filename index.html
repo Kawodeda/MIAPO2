@@ -1,4 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <h1>Color Converter!</h1>
+    <head>
+        <title>Color Converter!</title>
+        <style>
+            label {
+                display: inline-block;
+            }
+
+            span {
+                display: inline-block;
+            }
+
+            .container {
+                padding: 5px;
+                width: fit-content;
+            }
+
+            div.container > * {
+                display: block;
+                margin: 1em 0 0 0;
+            }
+
+            .component-input {
+                width: 3em;
+            }
+
+            .rgb-input > div {
+                display: inline-block;
+            }
+
+            .rgb-input > div > label {
+                display: block;
+                margin-left: 1.2em;
+                margin-bottom: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Color Converter!</h1>
+        <form id="rgbToHex">
+            <div class="container">
+                <span style="text-align: center;">Rgb to Hex:</span>
+                <div class="rgb-input">
+                    <div>
+                        <label for="input">R</label>
+                        <input class="component-input" id="inputR" type="number" min="0" max="255" value="0" step="1" required>
+                    </div>
+                    <div>
+                        <label for="input">G</label>
+                        <input class="component-input" id="inputG" type="number" min="0" max="255" value="0" step="1" required>
+                    </div>
+                    <div>
+                        <label for="input">B</label>
+                        <input class="component-input" id="inputB" type="number" min="0" max="255" value="0" step="1" required>
+                    </div>
+                </div>
+                <input style="width: 100%;" type="submit" value="Convert">
+                <div>
+                    <label for="result">Result:&nbsp;</label>
+                    <span id="result">#000000</span>
+                </div>
+            </div>
+        </form>
+    </body>
 </html>
