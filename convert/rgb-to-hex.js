@@ -1,4 +1,4 @@
-import { clampValue } from '../utils/math';
+import { clampValue } from '../utils/math.js';
 
 export function rgbToHex(rgbColor) {
     const rHex = convertComponent(rgbColor.r);
