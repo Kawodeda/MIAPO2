@@ -29,3 +29,7 @@ div.container > * {
     margin-left: 1.2em;
     margin-bottom: 5px;
 }
+
+.hsv-output > span {
+    margin-right: 1em;
+}

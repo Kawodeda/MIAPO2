@@ -10,34 +10,34 @@ export function rgbToHsv(rgbColor) {
 }
 
 function hue(rgbColor) {
-    const delta = delta(rgbColor);
-    if(nearlyEquals(delta, 0)) {
+    const d = delta(rgbColor);
+    if(nearlyEquals(d, 0)) {
         return 0;
     }
 
     const r = toRelative(rgbColor.r);
     const g = toRelative(rgbColor.g);
     const b = toRelative(rgbColor.b);
-    const maxComponent = maxComponent(rgbColor);
+    const cMax = maxComponent(rgbColor);
 
-    if(nearlyEquals(maxComponent, r)) {
-        return 60 * ((g - b) / delta % 6);
+    if(nearlyEquals(cMax, r)) {
+        return 60 * ((g - b) / d % 6);
     }
-    if(nearlyEquals(maxComponent, g)) {
-        return 60 * ((b - r) / delta + 2);
+    if(nearlyEquals(cMax, g)) {
+        return 60 * ((b - r) / d + 2);
     }
-    if(nearlyEquals(maxComponent, b)) {
-        return 60 * ((r - g) / delta + 4);
+    if(nearlyEquals(cMax, b)) {
+        return 60 * ((r - g) / d + 4);
     }
 }
 
 function saturation(rgbColor) {
-    const maxComponent = maxComponent(rgbColor);
-    if(nearlyEquals(maxComponent, 0)) {
+    const cMax = maxComponent(rgbColor);
+    if(nearlyEquals(cMax, 0)) {
         return 0;
     }
     else {
-        return delta(rgbColor) / maxComponent;
+        return delta(rgbColor) / cMax;
     }
 }
 
