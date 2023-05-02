@@ -3,6 +3,7 @@
     <head>
         <title>Color Converter!</title>
         <script src="rgb-to-hex-controller.js" type="module"></script>
+        <script src="hex-to-rgb-controller.js" type="module"></script>
         <script src="rgb-to-hsv-controller.js" type="module"></script>
         <link href="styles.css" rel="stylesheet">
     </head>
@@ -64,5 +65,24 @@
                 </div>
             </form>
         </div>
+        <form id="hexToRgb">
+            <div class="container">
+                <span style="text-align: center;">Hex to Rgb:</span>
+                <div>
+                    <label for="inputHex">Hex:&nbsp;</label>
+                    <input id="inputHex" class="hex-input" type="text" pattern="^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$" value="#000000" required>
+                </div>
+                <input style="width: 100%;" type="submit" value="Convert">
+                <span style="text-align: center;">Result:</span>
+                <div class="rgb-output">
+                    <label for="rResult1">R:&nbsp;</label>
+                    <span id="rResult1">0</span>
+                    <label for="gResult1">G:&nbsp;</label>
+                    <span id="gResult1">0</span>
+                    <label for="bResult1">B:&nbsp;</label>
+                    <span id="bResult1">0</span>
+                </div>
+            </div>
+        </form>
     </body>
 </html>
