@@ -9,11 +9,11 @@
     </head>
     <body>
         <h1>Color Converter!</h1>
-        <div style="display: inline-block;">
-            <form id="rgbToHex">
+        <div>
+            <form id="rgbToHex" style="display: inline-block;">
                 <div class="container">
                     <span style="text-align: center;">Rgb to Hex:</span>
-                    <div class="rgb-input">
+                    <div class="color-input">
                         <div>
                             <label for="inpuR1">R</label>
                             <input class="component-input" id="inputR1" type="number" min="0" max="255" value="0" step="1" required>
@@ -34,12 +34,10 @@
                     </div>
                 </div>
             </form>
-        </div>
-        <div style="display: inline-block; margin-left: 10px;">
-            <form id="rgbToHsv">
+            <form id="rgbToHsv" style="display: inline-block;">
                 <div class="container">
                     <span style="text-align: center;">Rgb to Hsv:</span>
-                    <div class="rgb-input">
+                    <div class="color-input">
                         <div>
                             <label for="inputR2">R</label>
                             <input class="component-input" id="inputR2" type="number" min="0" max="255" value="0" step="1" required>
@@ -54,7 +52,7 @@
                         </div>
                     </div>
                     <input style="width: 100%;" type="submit" value="Convert">
-                    <div class="hsv-output">
+                    <div class="color-output">
                         <label for="hResult">H:&nbsp;</label>
                         <span id="hResult">0.00</span>
                         <label for="sResult">S:&nbsp;</label>
@@ -65,24 +63,54 @@
                 </div>
             </form>
         </div>
-        <form id="hexToRgb">
-            <div class="container">
-                <span style="text-align: center;">Hex to Rgb:</span>
-                <div>
-                    <label for="inputHex">Hex:&nbsp;</label>
-                    <input id="inputHex" class="hex-input" type="text" pattern="^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$" value="#000000" required>
+        <div>
+            <form id="hexToRgb" style="display: inline-block;">
+                <div class="container">
+                    <span style="text-align: center;">Hex to Rgb:</span>
+                    <div>
+                        <label for="inputHex">Hex:&nbsp;</label>
+                        <input id="inputHex" class="hex-input" type="text" pattern="^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$" value="#000000" required>
+                    </div>
+                    <input style="width: 100%;" type="submit" value="Convert">
+                    <span style="text-align: center;">Result:</span>
+                    <div class="color-output">
+                        <label for="rResult1">R:&nbsp;</label>
+                        <span id="rResult1">0</span>
+                        <label for="gResult1">G:&nbsp;</label>
+                        <span id="gResult1">0</span>
+                        <label for="bResult1">B:&nbsp;</label>
+                        <span id="bResult1">0</span>
+                    </div>
                 </div>
-                <input style="width: 100%;" type="submit" value="Convert">
-                <span style="text-align: center;">Result:</span>
-                <div class="rgb-output">
-                    <label for="rResult1">R:&nbsp;</label>
-                    <span id="rResult1">0</span>
-                    <label for="gResult1">G:&nbsp;</label>
-                    <span id="gResult1">0</span>
-                    <label for="bResult1">B:&nbsp;</label>
-                    <span id="bResult1">0</span>
+            </form>
+            <form id="hsvToRgb" style="display: inline-block;">
+                <div class="container">
+                    <span style="text-align: center;">Hsv to Rgb:</span>
+                    <div class="color-input">
+                        <div>
+                            <label for="inputH">H</label>
+                            <input class="component-input" style="width: 4em;" id="inputH" type="number" min="0" max="360" value="0" step="0.1" required>
+                        </div>
+                        <div>
+                            <label for="inputS">S</label>
+                            <input class="component-input" id="inputS" type="number" min="0" max="1" value="0" step="0.1" required>
+                        </div>
+                        <div>
+                            <label for="inputV">V</label>
+                            <input class="component-input" id="inputV" type="number" min="0" max="1" value="0" step="0.1" required>
+                        </div>
+                    </div>
+                    <input style="width: 100%;" type="submit" value="Convert">
+                    <div class="color-output">
+                        <label for="rResult2">R:&nbsp;</label>
+                        <span id="rResult2">0</span>
+                        <label for="gResult2">G:&nbsp;</label>
+                        <span id="gResult2">0</span>
+                        <label for="bResult2">B:&nbsp;</label>
+                        <span id="bResult2">0</span>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </div>
     </body>
 </html>
